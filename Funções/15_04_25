@@ -1,0 +1,55 @@
+package assunto4_funcao;
+
+import java.util.Scanner;
+
+public class assunto4_funcao {
+
+	public static void main(String[] args) {
+		Scanner le = new Scanner(System.in);
+		
+		double nota1, nota2, media;
+		int avaliacao;
+		
+		for(int alunos=1; alunos <= 4 ; alunos++) {
+			System.out.println("Aluno " + alunos);
+				
+			System.out.println("Qual eh a primeira nota do aluno: ");
+			nota1 = le.nextDouble();
+			
+			System.out.println("Qual eh a segunda nota do aluno: ");
+			nota2 = le.nextDouble();
+			
+			media = media_com_pesos(nota1, nota2);
+			System.out.println("Media: " + media);
+			
+			System.out.println("Conceito: " + conceito(media));
+			
+		
+		}
+		
+		
+		
+		le.close();
+		
+	}
+
+	public static double media_com_pesos(double a, double b) {
+		
+		double media;
+		
+		media = (0.4*a + 0.6*b);
+		
+		return media;
+	}
+	
+	public static char conceito (double a) {
+		if (a >= 8.5) {
+			return 'E';
+		}
+		else if (a >= 5) {
+			return 'B';
+		}
+		else
+			return 'R';
+	}
+}
