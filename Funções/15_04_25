@@ -8,7 +8,6 @@ public class assunto4_funcao {
 		Scanner le = new Scanner(System.in);
 		
 		double nota1, nota2, media;
-		int avaliacao;
 		
 		for(int alunos=1; alunos <= 4 ; alunos++) {
 			System.out.println("Aluno " + alunos);
